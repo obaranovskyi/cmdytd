@@ -26,7 +26,6 @@ def convert_video_to_mp3(video_name, filename):
     except Exception as e:
         error(e) 
 
-
 def remove_temp_video_file(filename_to_remove):
     info('Cleaning ...')
     if os.path.exists(filename_to_remove):

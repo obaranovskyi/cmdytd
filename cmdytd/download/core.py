@@ -1,3 +1,4 @@
+from rich import print
 from pytube import YouTube
 import scrapetube
 from .consts import youtube_url
