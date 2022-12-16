@@ -18,10 +18,13 @@ def register_subparsers():
     playlist_subparser()
 
 def main():
-    set_default_to_help()
-    register_subparsers()
-    args = parser.parse_args()
-    args.func(args)
+    try:
+        set_default_to_help()
+        register_subparsers()
+        args = parser.parse_args()
+        args.func(args)
+    except Exception:
+        exit(1)
 
 if __name__ == '__main__':
     main()
