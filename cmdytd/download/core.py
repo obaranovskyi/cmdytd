@@ -28,9 +28,9 @@ def download_video_using_url(video_id):
     download_url = f"{youtube_url}watch?v={video_id}"
     yt = YouTube(replace_terminal_encoding(download_url), on_progress_callback=print_download_progress)
     yt.streams.filter(progressive=True, file_extension='mp4') \
-              .order_by('resolution') \
-              .desc() \
-              .first() \
+              .order_by('resolution')                         \
+              .desc()                                         \
+              .first()                                        \
               .download()
 
     return yt.streams[0].title
